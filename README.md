@@ -3,8 +3,12 @@ Here you can find all the working scripts Project and the features of my PhotoBo
 
 - <b>Raspberry Pi</b>
   - RaspbianOS (flashing microsd and configuration)
-  - PiBooth (installation, configuration and plugins setup)
+- <b>PiBooth</b>
+  - RaspbianOS configuration
+  - QRcode plugin configuration
 - <b>External Hard Disk</b>
+  - RaspbianOS configuration
+  - PiBooth configuration
 - <b>PiCamera</b>
   - RaspbianOS configuration
   - PiBooth configuration
@@ -20,6 +24,3 @@ Here you can find all the working scripts Project and the features of my PhotoBo
   - Python script
   - RaspbianOS configuration
   - PiBooth configuration
-- <b>Thermal Printer</b>
-- <b>Thermal Printer</b>
-- <b>Thermal Printer</b>
