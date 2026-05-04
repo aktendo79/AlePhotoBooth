@@ -16,4 +16,44 @@
   </ul>
 </p>
 
-<p>Qui sotto mettiamo le foto dei collegamenti fisici bottone/RP</p>
+<h2>1. Save the script</h2>
+
+Put the script here for example:<br>
+<pre>/home/alessia/power_button.py</pre>
+Then make it executable:<br>
+<pre>chmod +x /home/alessia/power_button.py</pre>
+
+<h2>2. Create the service systemd</h2>
+
+Open:<br>
+<pre>sudo nano /etc/systemd/system/power-button.service</pre>
+Paste:<br>
+<pre>
+[Unit]
+Description=Shutdown Button Service (PPB)
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/alessia/power_button.py
+Restart=always
+User=alessia
+
+[Install]
+WantedBy=multi-user.target
+</pre>
+
+<h2>3. Activate the service</h2>
+<pre>
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable shutdown-button.service
+sudo systemctl start shutdown-button.service
+</pre>
+
+<h2>4. Test it</h2>
+
+Check the status:<br>
+<pre>sudo systemctl status shutdown-button.service</pre>
+
+It must be:<br>
+<pre>active (running)</pre>
