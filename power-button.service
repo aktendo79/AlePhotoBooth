@@ -1,0 +1,11 @@
+[Unit]
+Description=Shutdown Button Service (PPB)
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/alessia/power_button.py
+Restart=always
+User=alessia
+
+[Install]
+WantedBy=multi-user.target
