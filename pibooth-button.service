@@ -1,0 +1,16 @@
+[Unit]
+Description=Pibooth Button Controller
+After=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/alessia/pibooth_controller.py
+Restart=always
+RestartSec=2
+User=alessia
+WorkingDirectory=/home/alessia
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/alessia/.Xauthority
+
+[Install]
+WantedBy=graphical.target
